@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<context:component-scan base-package="com.springbook.biz" />
+	
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+	
+	<!-- <bean id="afterThrowing" class="com.springbook.biz.common.AfterThrowingAdvice" />
+	<bean id="after" class="com.springbook.biz.common.afterAdvice" /> -->
+	<!-- <bean id="around" class="com.springbook.biz.common.AroundAdvice" /> -->
+	
+	
+ 	 
+		<!-- <aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))" />
+		<aop:pointcut id="getPointcut" expression="execution(* com.springbook.biz..*Impl.get*(..))" /> -->
+	<!-- 	<aop:config>
+	  <aop:aspect ref="afterThrowing">
+			<aop:after-throwing pointcut-ref="allPointcut" method="exceptLog" throwing="exceptobj"/>
+		</aop:aspect>  
+		</aop:config> -->
+		
+	
+	
+	<!-- 설정 프로터티 파일을 활용한 DataSource 설정할때 215   -->
+	<!-- <context:property-placeholder location="classpath:config/database.properties" /> -->
+		<!--방법2. 프로퍼티 파일을 활용한 DataSource 설정 -->
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" 
+		> <property name="driverClassName" value="${jdbc.driver}" /> <property name="url" 
+		value="${jdbc.url}" /> <property name="username" value="${jdbc.username}" 
+		/> <property name="password" value="${jdbc.password}" /> </bean> -->
+	
+	<!--user 설정  어노테이션써서 이젠 bean 안씀-->
+	<!--  <bean id="userService" class="com.springbook.biz.user.impl.UserServiceImpl">
+		<property name="userDAO" ref="userDAO" />
+	</bean>
+
+	<bean id="userDAO" class="com.springbook.biz.user.impl.UserDAO" /> -->
+	
+	<!--board 설정  -->
+	<!--  <bean id="boardService" class="com.springbook.biz.board.impl.BoardServiceImpl">
+		<property name="boardDAOSpring" ref="boardDAOSpring" />
+	</bean> 
+ 
+	<bean id="boardDAOSpring" class="com.springbook.biz.board.impl.BoardDAOSpring" />  -->
+	
+	
+	
+	<!-- 방법1. Oracle DataSource 설정 -->
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+						  destroy-method="close">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl" />
+		<property name="username" value="scott" />
+		<property name="password" value="123456" />
+	</bean> -->
+
+	<!-- SpringJDBC 설정 -->
+<!-- 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean> -->
+
+	<!-- Transaction 설정  -->
+<!-- 	<bean id="txManager" 
+		  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		  <property name="dataSource" ref="dataSource"></property>
+	
+	</bean> -->
+	
+	
+	
+	
+	
+</beans>
