@@ -9,11 +9,11 @@ import com.springbook.biz.board.BoardService;
 import com.springbook.biz.board.BoardVO;
 
 
-//Service구현 클래스 작성 124
+//Service구현 클래스 작성 226
 @Service("boardService")
 public class BoardServiceImpl implements BoardService {
 	@Autowired
-	private BoardDAO boardDAO;
+	private BoardDAOSpring boardDAO;
 	
 	
 	public void insertBoard(BoardVO vo) {

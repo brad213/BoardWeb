@@ -16,4 +16,14 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
+  <servlet>
+    <description></description>
+    <display-name>action</display-name>
+    <servlet-name>action</servlet-name>
+    <servlet-class>com.springbook.view.controller.DispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
 </web-app>

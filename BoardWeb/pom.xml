@@ -126,12 +126,14 @@
 
 		<!-- JDBC: Java Data Base Connectivity, 자바 데이터 베이스 연결 정의는 DataBase와 연결하기 
 			위한 Java Interface -->
+		
 		<!-- JDBC스프링라이브러리https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>5.2.0.RELEASE</version>
+			<version>4.2.4.RELEASE</version>
 		</dependency>
+
 
 
 		<!-- DBCP: Database Connection Pool, DataBase와 Connection을 맺고 있는 객체를 관리하기 
