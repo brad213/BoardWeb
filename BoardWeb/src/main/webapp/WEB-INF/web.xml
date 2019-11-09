@@ -16,6 +16,8 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
+  
+  <!-- *.do로 실행 -->
   <servlet>
     <description></description>
     <display-name>action</display-name>
